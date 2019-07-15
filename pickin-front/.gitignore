@@ -4,5 +4,6 @@
 # bundle files
 /dist
 
-# package.json
-package-lock.json
+# OS generated file
+.DS_Store
+**/.DS_Store

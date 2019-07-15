@@ -1,12 +1,24 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import { GlobalStyle } from "./../public/GlobalStyle";
+import { BrowserRouter, Route } from "react-router-dom";
+import { Landing } from "./pages/index";
 
 interface Props {}
 
-const App = ({  }: Props) => {
-  return <h1>Pickin</h1>;
-};
+interface State {}
+
+class App extends React.Component<Props, State> {
+  render() {
+    return (
+      <BrowserRouter>
+        <GlobalStyle />
+        <Route exact path="/" component={Landing} />
+      </BrowserRouter>
+    );
+  }
+}
 
 export default App;
 
-ReactDOM.render(<App />, document.getElementById('app'));
+ReactDOM.render(<App />, document.getElementById("app"));

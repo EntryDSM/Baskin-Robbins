@@ -40,6 +40,19 @@ module.exports = {
           { loader: "postcss-styled" },
           { loader: "sass-loader" }
         ]
+      },
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/,
+        use: [
+          {
+            loader: "url-loader",
+            options: {
+              name: "[name].[ext]?[hash]",
+              publicPath: "/dist",
+              limit: 200000
+            }
+          }
+        ]
       }
     ]
   },
