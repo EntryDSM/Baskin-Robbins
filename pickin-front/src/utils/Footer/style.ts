@@ -11,7 +11,7 @@ export const FooterContainer = styled.footer`
 
 export const FooterContent = styled.div`
   display: flex;
-  padding: 20px 390px 0 390px;
+  padding: 20px 390px 0;
 `;
 
 export const LeftContent = styled.div`
