@@ -72,5 +72,9 @@ module.exports = {
       template: "[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+  devtool: "inline-source-map",
+  devServer: {
+    historyApiFallback: true
+  }
 };
