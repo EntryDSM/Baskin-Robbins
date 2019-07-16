@@ -49,7 +49,7 @@ module.exports = {
             options: {
               name: "[name].[ext]?[hash]",
               publicPath: "/dist",
-              limit: 200000
+              limit: 2000000
             }
           }
         ]
@@ -72,5 +72,9 @@ module.exports = {
       template: "[name].css",
       chunkFilename: "[id].css"
     })
-  ]
+  ],
+  devtool: "inline-source-map",
+  devServer: {
+    historyApiFallback: true
+  }
 };
