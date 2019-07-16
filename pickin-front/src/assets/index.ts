@@ -4,6 +4,7 @@ import agencyIcon from "./signup/cityscape.png";
 import interviewerIcon from "./signup/interview.png";
 import facebookIcon from "./footer/facebook.png";
 import githubIcon from "./footer/github.png";
+import landingImg from "./landing/04.jpg";
 
 export {
   entryLogo,
@@ -11,5 +12,6 @@ export {
   agencyIcon,
   interviewerIcon,
   facebookIcon,
-  githubIcon
+  githubIcon,
+  landingImg
 };

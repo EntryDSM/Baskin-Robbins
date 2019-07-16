@@ -64,6 +64,10 @@ export const GlobalStyle: GlobalStyleComponent<
       }
     }
   
+    button {
+      all: unset;
+    }
+
     input:focus,
     select:focus,
     textarea:focus,
