@@ -5,7 +5,7 @@ import * as S from "./style";
 import Footer from "../../utils/Footer";
 import { pickinLogo } from "./../../assets/index";
 
-const Landing = () => (
+const Landing: React.FC = () => (
   <div>
     <S.LandingBackground>
       <S.LandingContainer>
