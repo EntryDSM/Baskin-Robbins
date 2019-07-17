@@ -1,8 +1,8 @@
 import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { GlobalStyle } from "./../public/GlobalStyle";
-import { BrowserRouter, Route } from "react-router-dom";
-import { Landing } from "./pages/index";
+import { Switch, BrowserRouter, Route } from "react-router-dom";
+import { Landing, SignUp } from "./pages/index";
 
 interface Props {}
 
@@ -13,7 +13,10 @@ class App extends React.Component<Props, State> {
     return (
       <BrowserRouter>
         <GlobalStyle />
-        <Route exact path="/" component={Landing} />
+        <Switch>
+          <Route exact path="/" component={Landing} />
+          <Route exact path="/signup" component={SignUp} />
+        </Switch>
       </BrowserRouter>
     );
   }
