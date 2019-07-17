@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { mainColor } from "./../../../public/GlobalStyle";
 
-export const SignUpContainer = styled.div`
+export const SignUp = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -15,13 +15,13 @@ export const SignUpLogo = styled.img`
   height: 68px;
 `;
 
-export const SignUpTypes = styled.div`
+export const SignUpLinks = styled.div`
   overflow: auto;
   display: flex;
   justify-content: space-between;
 `;
 
-export const SignUpTypeBtn = styled.button`
+export const SignUpLinkBtn = styled.button`
   display: inline-block;
   width: 380px;
   height: 480px;
@@ -48,7 +48,7 @@ export const SignUpTypeBtn = styled.button`
   }
 `;
 
-export const SignUpTypeIcon = styled.img`
+export const SignUpLinkIcon = styled.img`
   display: block;
   width: 200px;
   height: 210px;
