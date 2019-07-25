@@ -2,7 +2,12 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { GlobalStyle } from "./../public/GlobalStyle";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
-import { Landing, SignUp } from "./pages/index";
+import {
+  Landing,
+  SignUp,
+  AgencySignUp,
+  InterviewerSignUp
+} from "./pages/index";
 
 interface Props {}
 
@@ -16,6 +21,12 @@ class App extends React.Component<Props, State> {
         <Switch>
           <Route exact path="/" component={Landing} />
           <Route exact path="/signup" component={SignUp} />
+          <Route exact path="/signup/agency" component={AgencySignUp} />
+          <Route
+            exact
+            path="/signup/interviewer"
+            component={InterviewerSignUp}
+          />
         </Switch>
       </BrowserRouter>
     );
