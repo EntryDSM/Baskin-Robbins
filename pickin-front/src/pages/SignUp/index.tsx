@@ -6,7 +6,7 @@ import { pickinLogo, interviewerIcon, agencyIcon } from "./../../assets/index";
 
 const SignUp: React.FC = () => (
   <S.SignUp>
-    <S.SignUpLogo src={pickinLogo} />
+    <S.SignUpLogo src={pickinLogo} alt="피킨 로고" />
     <S.SignUpLinks>
       <Link to="/signup/interviewer">
         <S.SignUpLinkBtn>

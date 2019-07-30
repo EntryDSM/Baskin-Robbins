@@ -10,7 +10,7 @@ const Landing: React.FC = () => (
     <S.LandingBackground>
       <S.LandingContainer>
         <Link to="/">
-          <S.LandingLogo src={pickinLogo} />
+          <S.LandingLogo src={pickinLogo} alt="피킨 로고" />
         </Link>
         <S.LandingText>
           <S.LandingMainText>

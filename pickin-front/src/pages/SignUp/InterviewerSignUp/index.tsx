@@ -8,7 +8,7 @@ const InterviewerSignUp: React.FC = () => {
   const [isChecked, setChecked] = React.useState<boolean>(false);
   return (
     <S.SignUpFormContainer>
-      <S.SignUpFormLogo src={pickinLogo} />
+      <S.SignUpFormLogo src={pickinLogo} alt="피킨 로고" />
       <InputBox boxName="Company Code" isAgency={true} type="text" />
       <InputBox boxName="Name" isAgency={false} type="text" />
       <InputBox boxName="E-mail" isAgency={false} type="text" />
