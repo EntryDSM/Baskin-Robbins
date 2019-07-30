@@ -5,15 +5,15 @@ import * as S from "./../style";
 interface Props {
   type: string;
   boxName: string;
-  checkAgency: boolean;
+  isAgency: boolean;
 }
 
-const InputBox: React.FC<Props> = ({ boxName, checkAgency, type }) => (
+const InputBox: React.FC<Props> = ({ boxName, isAgency, type }) => (
   <div>
     <S.SignUpBoxName>{boxName}</S.SignUpBoxName>
     <S.SignUpInputContainer>
       <S.SignUpInputBox placeholder={boxName} type={type} />
-      {checkAgency ? <S.CheckAgencyBtn>기관 확인</S.CheckAgencyBtn> : ""}
+      {isAgency && <S.CheckAgencyBtn>기관 확인</S.CheckAgencyBtn>}
     </S.SignUpInputContainer>
   </div>
 );
