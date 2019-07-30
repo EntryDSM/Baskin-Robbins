@@ -1,6 +1,10 @@
 import styled from "styled-components";
 import { mainColor } from "./../../../public/GlobalStyle";
 
+interface Props {
+  inputCheck: boolean;
+}
+
 export const SignUp = styled.div`
   display: flex;
   flex-direction: column;
@@ -53,4 +57,26 @@ export const SignUpLinkIcon = styled.img`
   width: 200px;
   height: 210px;
   margin: 0 auto 70px;
+`;
+
+export const SignUpFormLogo = styled.img`
+  width: 240px;
+  height: 62px;
+  margin-bottom: 55px;
+`;
+
+export const SignUpFormContainer = styled.div`
+  margin: 125px 610px;
+`;
+
+export const SignUpFormBtn = styled.button`
+  background-color: ${mainColor};
+  width: 100%;
+  height: 100px;
+  color: white;
+  font-size: 28px;
+  font-weight: bold;
+  letter-spacing: 1.4px;
+  text-align: center;
+  margin-top: 42px;
 `;

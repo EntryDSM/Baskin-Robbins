@@ -5,7 +5,7 @@ import interviewerIcon from "./signup/interview.png";
 import facebookIcon from "./footer/facebook.png";
 import githubIcon from "./footer/github.png";
 import landingImg from "./landing/04.jpg";
-import checkedIcon from "./signup/checked-3.png";
+import checkedIcon from "./signup/checked.png";
 
 export {
   entryLogo,
