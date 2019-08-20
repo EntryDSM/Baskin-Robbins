@@ -6,8 +6,9 @@ import {
   Landing,
   SignUp,
   AgencySignUp,
-  InterviewerSignUp
-} from "./pages/index";
+  InterviewerSignUp,
+  SignIn
+} from "./pages";
 
 interface Props {}
 
@@ -27,9 +28,10 @@ class App extends React.Component<Props, State> {
             path="/signup/interviewer"
             component={InterviewerSignUp}
           />
+          <Route exact path="/signin" component={SignIn} />
         </Switch>
       </BrowserRouter>
-    );
+    )
   }
 }
 
