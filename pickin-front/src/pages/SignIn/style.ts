@@ -20,10 +20,9 @@ export const SignInInput = styled.input`
   all: unset;
   flex-shrink: 1;
   height: 80px;
-  border: solid 0.5px #606060;
+  border: solid 0.5px rgba(95, 95, 95, 0.9);
   padding: 0 40px;
   margin-top: 48px;
-  opacity: 0.9;
   font-size: 18px;
   font-weight: 300;
 `;
