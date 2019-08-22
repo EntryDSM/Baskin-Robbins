@@ -6,7 +6,8 @@ import {
   Landing,
   SignUp,
   AgencySignUp,
-  InterviewerSignUp
+  InterviewerSignUp,
+  Main
 } from "./pages/index";
 
 interface Props {}
@@ -27,6 +28,7 @@ class App extends React.Component<Props, State> {
             path="/signup/interviewer"
             component={InterviewerSignUp}
           />
+          <Route exact path="/main" component={() => <Main isAdmin={true} />} />
         </Switch>
       </BrowserRouter>
     );
