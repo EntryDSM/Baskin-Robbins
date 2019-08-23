@@ -48,7 +48,7 @@ export const SignUpLinkBtn = styled.button`
   &:hover {
     border-color: ${mainColor};
     background-color: ${mainColor};
-    color: #ffffff;
+    color: white;
   }
 `;
 
