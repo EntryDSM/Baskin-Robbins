@@ -44,7 +44,7 @@ export const CreateAccountText = styled.p`
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  & p {
+  > p {
     padding-left: 15px;
     display: inline-block;
     font-weight: normal;
