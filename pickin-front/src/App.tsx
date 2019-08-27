@@ -7,6 +7,7 @@ import {
   SignUp,
   AgencySignUp,
   InterviewerSignUp,
+  Main,
   SignIn
 } from "./pages";
 
@@ -28,6 +29,7 @@ class App extends React.Component<Props, State> {
             path="/signup/interviewer"
             component={InterviewerSignUp}
           />
+          <Route exact path="/main" component={() => <Main isAdmin={true} />} />
           <Route exact path="/signin" component={SignIn} />
         </Switch>
       </BrowserRouter>
