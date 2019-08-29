@@ -3,19 +3,15 @@ import * as React from "react";
 import * as S from "./../style";
 
 interface Props {
-  type: string;
-  boxName: string;
-  isAgency: boolean;
+  boxType: string;
+  btnType: string;
 }
 
-const InputBox: React.FC<Props> = ({ boxName, isAgency, type }) => (
-  <div>
-    <S.SignUpBoxName>{boxName}</S.SignUpBoxName>
-    <S.SignUpInputContainer>
-      <S.SignUpInputBox placeholder={boxName} type={type} />
-      {isAgency && <S.CheckAgencyBtn>기관 확인</S.CheckAgencyBtn>}
-    </S.SignUpInputContainer>
-  </div>
+const InputBox: React.FC<Props> = ({boxType, btnType}) => (
+  <S.SignUpInputContainer>
+    <S.SignUpInputBox placeholder={boxType} />
+    <S.CheckBtn>{btnType}</S.CheckBtn>
+  </S.SignUpInputContainer>
 );
 
 export default InputBox;
