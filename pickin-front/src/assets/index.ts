@@ -6,6 +6,8 @@ import facebookIcon from "./footer/facebook.png";
 import githubIcon from "./footer/github.png";
 import landingImg from "./landing/04.jpg";
 import checkedIcon from "./signup/checked.png";
+import caretDown from "./main/caret-down.png";
+import searchIcon from "./main/baseline-search.png";
 
 export {
   entryLogo,
@@ -15,5 +17,7 @@ export {
   facebookIcon,
   githubIcon,
   landingImg,
-  checkedIcon
+  checkedIcon,
+  caretDown,
+  searchIcon
 };
