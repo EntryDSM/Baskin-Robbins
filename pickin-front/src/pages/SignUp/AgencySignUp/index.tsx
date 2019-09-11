@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import * as S from "./../style";
 import { pickinLogo } from "./../../../assets";
 import { ClauseAdmit, InputBox } from "./../../../component";
+import { signUpToAgency } from "./../../../services/post";
 
 export interface Props {}
 
