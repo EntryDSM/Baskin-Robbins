@@ -13,15 +13,45 @@ import {
 
 interface Props {}
 
-interface State {}
+interface State {
+  isLogin: boolean;
+  isAdmin: boolean;
+  agencyName: string;
+  interviewStatus: string;
+}
 
 class App extends React.Component<Props, State> {
+  state = {
+    isLogin: true,
+    isAdmin: true,
+    agencyName: "Pickin",
+    interviewStatus: "Will pick"
+  };
+
+  private changeLoginStatus = (): void =>
+    this.setState({ isLogin: !this.state.isLogin });
+
   render() {
     return (
       <BrowserRouter>
         <GlobalStyle />
         <Switch>
-          <Route exact path="/" component={Landing} />
+          <Route
+            exact
+            path="/"
+            component={
+              this.state.isLogin
+                ? () => (
+                    <Main
+                      isAdmin={this.state.isAdmin}
+                      agencyName={this.state.agencyName}
+                      interviewStatus={this.state.interviewStatus}
+                      changeLoginStatus={this.changeLoginStatus}
+                    />
+                  )
+                : Landing
+            }
+          />
           <Route exact path="/signup" component={SignUp} />
           <Route exact path="/signup/agency" component={AgencySignUp} />
           <Route
@@ -29,11 +59,10 @@ class App extends React.Component<Props, State> {
             path="/signup/interviewer"
             component={InterviewerSignUp}
           />
-          <Route exact path="/main" component={() => <Main isAdmin={true} />} />
           <Route exact path="/signin" component={SignIn} />
         </Switch>
       </BrowserRouter>
-    )
+    );
   }
 }
 
