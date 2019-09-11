@@ -25,4 +25,3 @@ export const signUpToAgency = async (input: agencySignUpType) => {
   const response = await axios.post(`${baseUrl}/admin/signup`, input);
   return response.status;
 };
-
