@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MainPageContainer = styled.div`
   height: 100vh;
+  overflow: auto;
 `;
 
 export const MainContainer = styled.div`
@@ -9,13 +10,14 @@ export const MainContainer = styled.div`
 `;
 
 export const MainListDeterminent = styled.div`
+  margin-bottom: 68px;
   display: flex;
   justify-content: space-between;
 `;
 
 export const MainCategoryBtn = styled.button`
   display: inline-block;
-  width: 193px;
+  width: 190px;
   height: 45px;
   margin-right: 10px;
   border-radius: 5px;

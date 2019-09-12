@@ -25,11 +25,17 @@ class App extends React.Component<Props, State> {
     isLogin: true,
     isAdmin: true,
     agencyName: "Pickin",
-    interviewStatus: "Will pick"
+    interviewStatus: "Pickin"
   };
 
-  private changeLoginStatus = (): void =>
+  private handleLoginStatus = (): void =>
     this.setState({ isLogin: !this.state.isLogin });
+
+  private handleInterviewStatus = (status: string): void =>
+    this.setState({ interviewStatus: status });
+
+  private handleAgencyName = (name: string): void =>
+    this.setState({ agencyName: name });
 
   render() {
     return (
@@ -46,7 +52,9 @@ class App extends React.Component<Props, State> {
                       isAdmin={this.state.isAdmin}
                       agencyName={this.state.agencyName}
                       interviewStatus={this.state.interviewStatus}
-                      changeLoginStatus={this.changeLoginStatus}
+                      handleLoginStatus={this.handleLoginStatus}
+                      handleInterviewStatus={this.handleInterviewStatus}
+                      handleAgencyName={this.handleAgencyName}
                     />
                   )
                 : Landing

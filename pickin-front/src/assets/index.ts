@@ -8,6 +8,7 @@ import landingImg from "./landing/04.jpg";
 import checkedIcon from "./signup/checked.png";
 import caretDown from "./main/caret-down.png";
 import searchIcon from "./main/baseline-search.png";
+import settingIcon from "./main/settings-work-tool.png"
 
 export {
   entryLogo,
@@ -19,5 +20,6 @@ export {
   landingImg,
   checkedIcon,
   caretDown,
-  searchIcon
+  searchIcon,
+  settingIcon
 };
