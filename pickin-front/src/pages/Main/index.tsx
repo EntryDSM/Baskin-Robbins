@@ -4,7 +4,12 @@ import * as S from "./style";
 import Header from "./../../utils/Header";
 import Footer from "./../../utils/Footer";
 import { caretDown } from "./../../assets";
-import { SearchBox, InterviewList, CategoryDropdown } from "./../../component";
+import {
+  SearchBox,
+  CategoryDropdown,
+  InterviewList,
+  Pagenation
+} from "./../../component";
 
 interface Interview {
   title: string;
@@ -37,6 +42,54 @@ class Main extends React.Component<Props, State> {
       {
         title: "hello2",
         explanation: "entry2"
+      },
+      {
+        title: "hello3",
+        explanation: "entry3"
+      },
+      {
+        title: "hello4",
+        explanation: "entry4"
+      },
+      {
+        title: "hello5",
+        explanation: "entry5"
+      },
+      {
+        title: "hello6",
+        explanation: "entry6"
+      },
+      {
+        title: "hello7",
+        explanation: "entry7"
+      },
+      {
+        title: "hello8",
+        explanation: "entry8"
+      },
+      {
+        title: "hello9",
+        explanation: "entry9"
+      },
+      {
+        title: "hello10",
+        explanation: "entry10"
+      },
+      {
+        title: "hello11",
+        explanation: "entry11"
+      },
+      {
+        title: "hello12",
+        explanation: "entry12"
+      },
+      {
+        title: "hello13",
+        explanation: "entry13"
+      },
+      {
+        title: "hello14",
+        explanation: "entry14"
       }
     ],
     isCategoryClicked: false
@@ -90,7 +143,7 @@ class Main extends React.Component<Props, State> {
                 />
               )}
             </S.MainListDeterminent>
-            <InterviewList
+            <Pagenation
               interview={this.state.interview}
               interviewStatus={this.props.interviewStatus}
             />

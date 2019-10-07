@@ -1,8 +1,7 @@
 import styled from "styled-components";
 
 export const MainPageContainer = styled.div`
-  height: 100vh;
-  overflow: auto;
+  height: 1286px;
 `;
 
 export const MainContainer = styled.div`
