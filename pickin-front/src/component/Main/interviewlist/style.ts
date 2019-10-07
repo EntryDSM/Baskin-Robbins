@@ -1,5 +1,9 @@
 import styled from "styled-components";
 
+interface PageProps {
+  isCurrentPage: boolean;
+}
+
 export const InterviewContainer = styled.div`
   position: relative;
   margin-top: -1px;
@@ -48,14 +52,15 @@ export const InterviewSettingButton = styled.img`
   height: 36px;
 `;
 
-export const InterviewPagenation = styled.ul`
+export const InterviewPagenation = styled.ol`
   cursor: pointer;
-  margin-top: 48px;
+  margin: 48px 0;
   display: flex;
   justify-content: center;
 `;
 
 export const InterviewPageNumber = styled.li`
   font-size: 18px;
-  color: #000000;
+  color: ${(props: PageProps) => props.isCurrentPage && "#e5a39a"};
+  font-weight: ${(props: PageProps) => props.isCurrentPage && "bold"};
 `;
