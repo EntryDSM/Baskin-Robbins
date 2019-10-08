@@ -7,8 +7,7 @@ import { caretDown } from "./../../assets";
 import {
   SearchBox,
   CategoryDropdown,
-  InterviewList,
-  Pagenation
+  InterviewList
 } from "./../../component";
 
 interface Interview {
@@ -143,7 +142,7 @@ class Main extends React.Component<Props, State> {
                 />
               )}
             </S.MainListDeterminent>
-            <Pagenation
+            <InterviewList
               interview={this.state.interview}
               interviewStatus={this.props.interviewStatus}
             />

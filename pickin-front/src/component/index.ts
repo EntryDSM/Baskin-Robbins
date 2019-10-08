@@ -12,3 +12,4 @@ export { default as Narrative } from "./CreateInterview/narrative";
 export { default as OX } from "./CreateInterview/ox";
 export { default as AddInterviewer } from "./CreateInterview/addinterviewer";
 export { default as DefaultForm } from "./CreateInterview/defaultform";
+export { default as Pagenation } from "./Main/pagenation";
