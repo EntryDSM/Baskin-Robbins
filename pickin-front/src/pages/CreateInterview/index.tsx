@@ -10,7 +10,11 @@ interface Question {
   checkList: string[];
 }
 
-const CreateInterview: React.FC = () => {
+interface Props {
+  changeLoginStatus(): void;
+}
+
+const CreateInterview: React.FC<Props> = ({ changeLoginStatus }) => {
   const [isAddClicked, setIsAddClicked] = React.useState<boolean>(false);
   const [interviewTitle, setInterviewTitle] = React.useState<string>(
     "제목 없음"
@@ -84,7 +88,7 @@ const CreateInterview: React.FC = () => {
 
   return (
     <div>
-      <Header isAdmin={false} />
+      <Header changeLoginStatus={changeLoginStatus} isAdmin={false} />
       <S.CreateInterviewContainer>
         <S.CreateInterviewTitle
           placeholder="면접 이름을 입력해 주세요"
