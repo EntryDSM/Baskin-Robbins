@@ -25,7 +25,7 @@ export {
   checkedIcon,
   caretDown,
   searchIcon,
-  settingIcon
+  settingIcon,
   checkedEmail,
   dropdown,
   deleteIcon,
