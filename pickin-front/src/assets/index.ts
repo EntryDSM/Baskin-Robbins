@@ -6,6 +6,9 @@ import facebookIcon from "./footer/facebook.png";
 import githubIcon from "./footer/github.png";
 import landingImg from "./landing/04.jpg";
 import checkedIcon from "./signup/checked.png";
+import caretDown from "./main/caret-down.png";
+import searchIcon from "./main/baseline-search.png";
+import settingIcon from "./main/settings-work-tool.png"
 import checkedEmail from "./createinterview/checked.png";
 import dropdown from "./createinterview/caret-down.png"
 import deleteIcon from "./createinterview/cancel-button.png";
@@ -20,6 +23,9 @@ export {
   githubIcon,
   landingImg,
   checkedIcon,
+  caretDown,
+  searchIcon,
+  settingIcon
   checkedEmail,
   dropdown,
   deleteIcon,
