@@ -17,7 +17,6 @@ const AddInterviewer: React.FC<Props> = ({ setIsAddClicked }) => {
       assignedArray.push(false);
     }
     setIsAssigned(assignedArray);
-    console.log(isAssigned);
   }, []);
 
   const HandleIsAssigned = (interviewIndex: number) =>
@@ -35,7 +34,6 @@ const AddInterviewer: React.FC<Props> = ({ setIsAddClicked }) => {
     <S.AddInterviewerList
       onClick={() => {
         HandleIsAssigned(index);
-        console.log(isAssigned[index]);
       }}
     >
       {interviewer.interviewer_name} 님 ({interviewer.email})
