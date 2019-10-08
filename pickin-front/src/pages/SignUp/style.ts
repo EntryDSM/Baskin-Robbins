@@ -1,9 +1,6 @@
 import styled from "styled-components";
 import { mainColor } from "./../../../public/GlobalStyle";
-
-interface Props {
-  inputCheck: boolean;
-}
+import { checkPropTypes } from "prop-types";
 
 export const SignUp = styled.div`
   display: flex;
@@ -48,7 +45,7 @@ export const SignUpLinkBtn = styled.button`
   &:hover {
     border-color: ${mainColor};
     background-color: ${mainColor};
-    color: #ffffff;
+    color: white;
   }
 `;
 
@@ -66,7 +63,10 @@ export const SignUpFormLogo = styled.img`
 `;
 
 export const SignUpFormContainer = styled.div`
-  margin: 125px 610px;
+  display: flex;
+  flex-direction: column;
+  width: 700px;
+  margin: 125px auto;
 `;
 
 export const SignUpFormBtn = styled.button`
@@ -79,4 +79,27 @@ export const SignUpFormBtn = styled.button`
   letter-spacing: 1.4px;
   text-align: center;
   margin-top: 42px;
+`;
+
+export const SignUpInputBox = styled.input`
+  all: unset;
+  flex-shrink: 1;
+  width: calc(100% - 64px);
+  border: solid 1px #bfbfbf;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 25px 32px;
+  margin-bottom: 40px;
+`;
+
+export const SignUpAgencyExplainField = styled.textarea`
+  all: unset;
+  flex-shrink: 1;
+  width: calc(100% - 64px);
+  height: 80px;
+  border: solid 1px #bfbfbf;
+  font-size: 18px;
+  font-weight: 300;
+  padding: 25px 32px;
+  margin-bottom: 40px;
 `;
