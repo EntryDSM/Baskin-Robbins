@@ -8,7 +8,8 @@ import {
   AgencySignUp,
   InterviewerSignUp,
   Main,
-  SignIn
+  SignIn,
+  CreateInterview
 } from "./pages";
 
 interface Props {}
@@ -68,6 +69,7 @@ class App extends React.Component<Props, State> {
             component={InterviewerSignUp}
           />
           <Route exact path="/signin" component={SignIn} />
+          <Route exact path="/create" component={CreateInterview} />
         </Switch>
       </BrowserRouter>
     );

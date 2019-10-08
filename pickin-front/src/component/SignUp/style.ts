@@ -4,8 +4,8 @@ import { mainColor } from "./../../../public/GlobalStyle";
 export const SignUpInputContainer = styled.div`
   display: flex;
   justify-content: space-between;
-  height: 80px;
-  border: solid 0.5px #606060;
+  height: 70px;
+  border: solid 1px #bfbfbf;
   margin-bottom: 40px;
 `;
 
@@ -15,30 +15,18 @@ export const SignUpInputBox = styled.input`
   height: 20px;
   font-size: 18px;
   font-weight: 300;
-  margin: 30px 40px;
+  margin: 24px 32px;
 `;
 
-export const SignUpBoxName = styled.p`
-  display: inline-block;
-  color: #606060;
-  background-color: #ffffff;
-  position: relative;
-  left: 40px;
-  bottom: -8px;
-  padding: 0 3px;
-  font-size: 14px;
-  font-weight: 300;
-`;
-
-export const CheckAgencyBtn = styled.button`
-  width: 100px;
-  height: 36px;
-  border-radius: 18px;
+export const CheckBtn = styled.button`
+  width: 80px;
+  height: 26px;
+  border-radius: 3px;
   background-color: ${mainColor};
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
   color: #ffffff;
-  margin: 22px 36px;
+  margin: 19px 16px;
   text-align: center;
 `;
 
@@ -47,7 +35,7 @@ export const ClauseCheckbox = styled.div`
   margin-right: 16px;
   width: 28px;
   height: 28px;
-  border: solid 0.5px #606060;
+  border: solid 0.5px #bfbfbf;
   cursor: pointer;
 `;
 
@@ -77,4 +65,13 @@ export const ClauseDocument = styled.p`
   line-height: 4;
   letter-spacing: 0.35px;
   cursor: pointer;
+`;
+
+export const InputError = styled.p`
+  display: inline-block;
+  font-size: 18px;
+  color: ${mainColor};
+  position: relative;
+  top: 30px;
+  left: 72px;
 `;
