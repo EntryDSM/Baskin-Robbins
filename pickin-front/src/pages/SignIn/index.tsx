@@ -12,12 +12,12 @@ const SignIn: React.FC = () => (
     <S.SignInInput placeholder="ID" />
     <S.SignInInput placeholder="Password" type="password" />
     <S.SignInBtn>Sign In</S.SignInBtn>
-    <S.CreateAccountText>
+    {/* <S.CreateAccountText>
       Do not have an account?
       <Link to="/signup">
         <p>Create Account</p>
       </Link>
-    </S.CreateAccountText>
+    </S.CreateAccountText> */}
   </S.SignInContainer>
 );
 
