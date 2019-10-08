@@ -69,7 +69,19 @@ class App extends React.Component<Props, State> {
             component={InterviewerSignUp}
           />
           <Route exact path="/signin" component={SignIn} />
-          <Route exact path="/create" component={CreateInterview} />
+          <Route
+            exact
+            path="/create"
+            component={
+              this.state.isLogin
+                ? () => (
+                    <CreateInterview
+                      changeLoginStatus={this.handleLoginStatus}
+                    />
+                  )
+                : Landing
+            }
+          />
         </Switch>
       </BrowserRouter>
     );

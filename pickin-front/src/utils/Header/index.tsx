@@ -17,7 +17,9 @@ const Header: React.FC<Props> = ({ isAdmin, changeLoginStatus }) => (
     <S.HeaderMenuContainer>
       {isAdmin && (
         <>
-          <S.HeaderMenuItem>면접 생성하기</S.HeaderMenuItem>
+          <Link to="/create">
+            <S.HeaderMenuItem>면접 생성하기</S.HeaderMenuItem>
+          </Link>
           <S.HeaderMenuItem>기관 관리</S.HeaderMenuItem>
           <S.HeaderMenuItem>면접관 관리</S.HeaderMenuItem>
         </>
