@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MainPageContainer = styled.div`
-  height: 1286px;
 `;
 
 export const MainContainer = styled.div`
