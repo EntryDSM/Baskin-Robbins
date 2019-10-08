@@ -17,9 +17,9 @@ const Landing: React.FC = () => (
             Hello <br /> This is Interview System
           </S.LandingMainText>
           <S.LandingSubText>Please sign up or sign in</S.LandingSubText>
-          <Link to="/signin">
+          {/* <Link to="/signin"> */}
             <S.SignInButton>Sign in</S.SignInButton>
-          </Link>
+          {/* </Link> */}
           <S.SignInOrUp>or</S.SignInOrUp>
           <Link to="/signup">
             <S.SignUpLink>Sign up</S.SignUpLink>
