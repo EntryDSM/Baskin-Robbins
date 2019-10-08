@@ -43,6 +43,8 @@ class App extends React.Component<Props, State> {
       <BrowserRouter>
         <GlobalStyle />
         <Switch>
+          <Route exact path="/" component={Landing} />
+          {/* <Route exact path="/signup" component={SignUp} /> */}
           <Route
             exact
             path="/"
@@ -61,7 +63,6 @@ class App extends React.Component<Props, State> {
                 : Landing
             }
           />
-          <Route exact path="/signup" component={SignUp} />
           <Route exact path="/signup/agency" component={AgencySignUp} />
           <Route
             exact
