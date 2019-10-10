@@ -2,7 +2,7 @@ import * as React from "react";
 
 import * as S from "./style";
 import Header from "./../../utils/Header";
-import { AddInterviewer, DefaultForm } from "./../../component";
+import { AddInterviewer, DefaultForm, SettingDate } from "./../../component";
 
 interface Question {
   type: number;
@@ -16,6 +16,7 @@ interface Props {
 
 const CreateInterview: React.FC<Props> = ({ changeLoginStatus }) => {
   const [isAddClicked, setIsAddClicked] = React.useState<boolean>(false);
+  const [isDateClicked, setIsDateClicked] = React.useState<boolean>(false);
   const [interviewTitle, setInterviewTitle] = React.useState<string>(
     "제목 없음"
   );
@@ -100,15 +101,26 @@ const CreateInterview: React.FC<Props> = ({ changeLoginStatus }) => {
             placeholder="면접 설명을 입력해 주세요"
             onChange={e => setInterviewSubtitle(e.target.value)}
           />
-          <S.CreateInterviewAddInterviewer
+          <S.CreateInterviewSettingBtn
+            onClick={() => setIsDateClicked(!isDateClicked)}
+          >
+            면접일 설정
+          </S.CreateInterviewSettingBtn>
+          <S.CreateInterviewSettingBtn
             onClick={() => setIsAddClicked(!isAddClicked)}
           >
             면접관 추가
-          </S.CreateInterviewAddInterviewer>
+          </S.CreateInterviewSettingBtn>
         </S.CreateInterviewHeader>
         {isAddClicked && (
           <AddInterviewer
             setIsAddClicked={() => setIsAddClicked(!isAddClicked)}
+          />
+        )}
+        {isDateClicked && (
+          <SettingDate
+            setIsDateClicked={setIsDateClicked}
+            isDateClicked={isDateClicked}
           />
         )}
         {Questions}
