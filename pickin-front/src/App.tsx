@@ -30,8 +30,12 @@ class App extends React.Component<Props, State> {
     interviewStatus: "Pickin"
   };
 
-  private handleLoginStatus = (loginStatus: boolean): void => {
-    this.setState({ isLogin: loginStatus });
+  private handleLoginStatus = (isLogin: boolean): void => {
+    this.setState({ isLogin: isLogin });
+  };
+
+  private handleAdminInfo = (isAdmin: boolean): void => {
+    this.setState({ isAdmin: isAdmin });
   };
 
   private handleInterviewStatus = (status: string): void =>
@@ -75,6 +79,7 @@ class App extends React.Component<Props, State> {
             path="/signin"
             component={() => (
               <SignIn
+                handleAdminInfo={this.handleAdminInfo}
                 handleLoginStatus={this.handleLoginStatus}
                 isLogin={this.state.isLogin}
               />

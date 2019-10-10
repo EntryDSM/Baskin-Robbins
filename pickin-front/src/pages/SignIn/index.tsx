@@ -12,7 +12,8 @@ interface StorageKey {
 
 interface Props {
   isLogin: boolean;
-  handleLoginStatus(loginStatus: boolean): void;
+  handleAdminInfo(isAdmin: boolean): void;
+  handleLoginStatus(isLogin: boolean): void;
 }
 
 interface State {
@@ -47,6 +48,7 @@ class SignIn extends React.Component<Props, State> {
 
       if (response.status === 200) {
         this.props.handleLoginStatus(true);
+        this.props.handleAdminInfo(response.data.admin);
       }
     } catch (error) {
       if (error.response.status === 400) {
