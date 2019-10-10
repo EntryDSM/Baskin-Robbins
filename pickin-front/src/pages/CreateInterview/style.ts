@@ -19,13 +19,20 @@ export const CreateInterviewTitle = styled.input`
 
 export const CreateInterviewSubtitle = styled.input`
   all: unset;
-  width: 700px;
+  width: 630px;
   font-size: 24px;
   margin-top: 16px;
   color: #505050;
 `;
 
-export const CreateInterviewAddInterviewer = styled.button`
+export const CreateInterviewSetDate = styled.div`
+  margin-top: 24px;
+  text-align: right;
+  font-weight: 300;
+  font-size: 20px;
+`;
+
+export const CreateInterviewSettingBtn = styled.button`
   width: 120px;
   height: 36px;
   border-radius: 5px;
@@ -33,7 +40,7 @@ export const CreateInterviewAddInterviewer = styled.button`
   font-size: 18px;
   font-weight: 300;
   text-align: center;
-  margin-top: 16px;
+  margin: 16px 0 0 16px;
 `;
 
 export const CreateInterviewBtnContainer = styled.div`

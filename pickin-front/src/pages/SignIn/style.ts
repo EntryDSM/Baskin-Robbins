@@ -27,6 +27,13 @@ export const SignInInput = styled.input`
   font-weight: 300;
 `;
 
+export const SignInError = styled.p`
+  margin-top: 16px;
+  font-size: 12px;
+  font-weight: 300;
+  color: #cc7467;
+`;
+
 export const SignInBtn = styled.button`
   display: block;
   width: 100%;
@@ -36,7 +43,7 @@ export const SignInBtn = styled.button`
   color: #ffffff;
   font-weight: bold;
   text-align: center;
-  margin-top: 98px;
+  margin-top: 34px;
 `;
 
 export const CreateAccountText = styled.p`

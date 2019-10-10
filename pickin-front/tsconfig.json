@@ -8,7 +8,8 @@
     "target": "es2015",
     "jsx": "react",
     "baseUrl": "src",
-    "typeRoots": ["/node_modules/@types", "@types"]
+    "typeRoots": ["/node_modules/@types", "@types"],
+    "types": ["node"]
   },
   "include": ["./src/**/*.tsx", "./src/**/*.ts"],
   "exclude": ["./node_modules", "./**/*.spec.ts"]

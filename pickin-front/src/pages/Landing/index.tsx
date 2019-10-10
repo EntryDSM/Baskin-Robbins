@@ -21,9 +21,9 @@ const Landing: React.FC = () => (
             <S.SignInButton>Sign in</S.SignInButton>
           </Link>
           <S.SignInOrUp>or</S.SignInOrUp>
-          <Link to="/signup">
+          {/* <Link to="/signup"> */}
             <S.SignUpLink>Sign up</S.SignUpLink>
-          </Link>
+          {/* </Link> */}
         </S.LandingText>
       </S.LandingContainer>
     </S.LandingBackground>
