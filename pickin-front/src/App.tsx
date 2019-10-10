@@ -2,6 +2,7 @@ import * as React from "react";
 import * as ReactDOM from "react-dom";
 import { GlobalStyle } from "./../public/GlobalStyle";
 import { Switch, BrowserRouter, Route } from "react-router-dom";
+
 import {
   Landing,
   SignUp,
@@ -29,8 +30,9 @@ class App extends React.Component<Props, State> {
     interviewStatus: "Pickin"
   };
 
-  private handleLoginStatus = (): void =>
-    this.setState({ isLogin: !this.state.isLogin });
+  private handleLoginStatus = (loginStatus: boolean): void => {
+    this.setState({ isLogin: loginStatus });
+  };
 
   private handleInterviewStatus = (status: string): void =>
     this.setState({ interviewStatus: status });
@@ -43,7 +45,6 @@ class App extends React.Component<Props, State> {
       <BrowserRouter>
         <GlobalStyle />
         <Switch>
-          <Route exact path="/" component={Landing} />
           {/* <Route exact path="/signup" component={SignUp} /> */}
           <Route
             exact
@@ -69,7 +70,16 @@ class App extends React.Component<Props, State> {
             path="/signup/interviewer"
             component={InterviewerSignUp}
           />
-          <Route exact path="/signin" component={SignIn} />
+          <Route
+            exact
+            path="/signin"
+            component={() => (
+              <SignIn
+                handleLoginStatus={this.handleLoginStatus}
+                isLogin={this.state.isLogin}
+              />
+            )}
+          />
           <Route
             exact
             path="/create"

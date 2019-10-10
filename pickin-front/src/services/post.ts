@@ -16,12 +16,27 @@ interface agencySignUpType {
   agency_explanation: string;
 }
 
-export const signUpToInterviewer = async (input: interviewerSignUpType) => {
-  const response = await axios.post(`${baseUrl}/interviewer/signup`, input);
+interface signInType {
+  email: string;
+  password: string;
+}
+
+interface TokenType {
+  access_token: string;
+  refresh_token: string;
+}
+
+export const signUpToInterviewer = async (body: interviewerSignUpType) => {
+  const response = await axios.post(`${baseUrl}/interviewer/signup`, body);
   return response.status;
 };
 
-export const signUpToAgency = async (input: agencySignUpType) => {
-  const response = await axios.post(`${baseUrl}/admin/signup`, input);
+export const signUpToAgency = async (body: agencySignUpType) => {
+  const response = await axios.post(`${baseUrl}/admin/signup`, body);
   return response.status;
+};
+
+export const getUserToken = async (body: signInType) => {
+  const response = await axios.post<TokenType>(`${baseUrl}/login`, body);
+  return response;
 };

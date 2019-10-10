@@ -11,7 +11,7 @@ interface Question {
 }
 
 interface Props {
-  changeLoginStatus(): void;
+  changeLoginStatus(loginStatus: boolean): void;
 }
 
 const CreateInterview: React.FC<Props> = ({ changeLoginStatus }) => {

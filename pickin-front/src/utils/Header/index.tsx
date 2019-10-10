@@ -6,7 +6,7 @@ import { pickinLogo } from "./../../assets";
 
 interface Props {
   isAdmin: boolean;
-  changeLoginStatus(): void;
+  changeLoginStatus(loginStatus: boolean): void;
 }
 
 const Header: React.FC<Props> = ({ isAdmin, changeLoginStatus }) => (
@@ -24,7 +24,9 @@ const Header: React.FC<Props> = ({ isAdmin, changeLoginStatus }) => (
           <S.HeaderMenuItem>면접관 관리</S.HeaderMenuItem>
         </>
       )}
-      <S.HeaderMenuItem onClick={changeLoginStatus}>로그아웃</S.HeaderMenuItem>
+      <S.HeaderMenuItem onClick={() => changeLoginStatus(false)}>
+        로그아웃
+      </S.HeaderMenuItem>
     </S.HeaderMenuContainer>
   </S.HeaderContainer>
 );
