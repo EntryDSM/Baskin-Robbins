@@ -38,5 +38,5 @@ export const signUpToAgency = async (body: agencySignUpType) => {
 
 export const getUserToken = async (body: signInType) => {
   const response = await axios.post<TokenType>(`${baseUrl}/login`, body);
-  return response.data;
+  return response;
 };
