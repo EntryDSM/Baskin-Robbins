@@ -13,6 +13,7 @@ import checkedEmail from "./createinterview/checked.png";
 import dropdown from "./createinterview/caret-down.png"
 import deleteIcon from "./createinterview/cancel-button.png";
 import wrong from "./createinterview/wrong.png";
+import next from "./certification/back.png";
 
 export {
   entryLogo,
@@ -29,5 +30,6 @@ export {
   checkedEmail,
   dropdown,
   deleteIcon,
-  wrong
+  wrong,
+  next
 };
