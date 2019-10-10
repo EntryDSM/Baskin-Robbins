@@ -11,10 +11,10 @@ interface Question {
 }
 
 interface Props {
-  changeLoginStatus(loginStatus: boolean): void;
+  handleLoginStatus(loginStatus: boolean): void;
 }
 
-const CreateInterview: React.FC<Props> = ({ changeLoginStatus }) => {
+const CreateInterview: React.FC<Props> = ({ handleLoginStatus }) => {
   const [isAddClicked, setIsAddClicked] = React.useState<boolean>(false);
   const [isDateClicked, setIsDateClicked] = React.useState<boolean>(false);
   const [interviewTitle, setInterviewTitle] = React.useState<string>(
@@ -89,7 +89,7 @@ const CreateInterview: React.FC<Props> = ({ changeLoginStatus }) => {
 
   return (
     <div>
-      <Header changeLoginStatus={changeLoginStatus} isAdmin={false} />
+      <Header handleLoginStatus={handleLoginStatus} isAdmin={false} />
       <S.CreateInterviewContainer>
         <S.CreateInterviewTitle
           placeholder="면접 이름을 입력해 주세요"

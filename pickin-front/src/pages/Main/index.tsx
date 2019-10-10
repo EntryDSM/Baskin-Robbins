@@ -104,7 +104,7 @@ class Main extends React.Component<Props, State> {
         <S.MainPageContainer>
           <Header
             isAdmin={this.props.isAdmin}
-            changeLoginStatus={this.props.handleLoginStatus}
+            handleLoginStatus={this.props.handleLoginStatus}
           />
           <S.MainContainer>
             <S.MainListDeterminent>
