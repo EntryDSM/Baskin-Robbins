@@ -4,11 +4,7 @@ import * as S from "./style";
 import Header from "./../../utils/Header";
 import Footer from "./../../utils/Footer";
 import { caretDown } from "./../../assets";
-import {
-  SearchBox,
-  CategoryDropdown,
-  InterviewList
-} from "./../../component";
+import { SearchBox, CategoryDropdown, InterviewList } from "./../../component";
 
 interface Interview {
   title: string;
@@ -19,7 +15,7 @@ interface Props {
   isAdmin: boolean;
   agencyName: string;
   interviewStatus: string;
-  handleLoginStatus(): void;
+  handleLoginStatus(loginStatus: boolean): void;
   handleInterviewStatus(status: string): void;
   handleAgencyName(name: string): void;
 }
