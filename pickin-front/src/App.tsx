@@ -10,7 +10,8 @@ import {
   InterviewerSignUp,
   Main,
   SignIn,
-  CreateInterview
+  CreateInterview,
+  Certification
 } from "./pages";
 
 interface Props {}
@@ -92,11 +93,18 @@ class App extends React.Component<Props, State> {
               this.state.isLogin
                 ? () => (
                     <CreateInterview
-                      changeLoginStatus={this.handleLoginStatus}
+                      handleLoginStatus={this.handleLoginStatus}
                     />
                   )
                 : Landing
             }
+          />
+          <Route
+            exact
+            path="/certification"
+            component={() => (
+              <Certification handleLoginStatus={this.handleLoginStatus} />
+            )}
           />
         </Switch>
       </BrowserRouter>

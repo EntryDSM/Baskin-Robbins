@@ -2,9 +2,13 @@ import * as React from "react";
 
 import Header from "./../../utils/Header";
 
-const Certification: React.FC = () => (
+interface Props {
+  handleLoginStatus(isLogin: boolean): void;
+}
+
+const Certification: React.FC<Props> = ({ handleLoginStatus }) => (
   <div>
-    <Header isAdmin={false} />
+    <Header isAdmin={false} handleLoginStatus={handleLoginStatus} />
   </div>
 );
 
