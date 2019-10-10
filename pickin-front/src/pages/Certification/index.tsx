@@ -31,7 +31,6 @@ const Certification: React.FC<Props> = ({ handleLoginStatus }) => {
             지원자의 수험번호를 입력해 주세요.
           </S.CertificationExplanation>
         </div>
-
         <S.CertificationInputContainer>
           <S.CertificationInputLabel>수험번호</S.CertificationInputLabel>
           <S.CertificationInput placeholder="수험번호를 입력해 주세요" />
