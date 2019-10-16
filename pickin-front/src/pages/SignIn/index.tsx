@@ -8,6 +8,7 @@ import { getUserToken } from "./../../services/post";
 interface StorageKey {
   access: string;
   refresh: string;
+  agencyCode: string;
 }
 
 interface Props {
@@ -49,6 +50,7 @@ class SignIn extends React.Component<Props, State> {
       if (response.status === 200) {
         this.props.handleLoginStatus(true);
         this.props.handleAdminInfo(response.data.admin);
+            agencyCode: response.data.agency_code
       }
     } catch (error) {
       if (error.response.status === 400) {

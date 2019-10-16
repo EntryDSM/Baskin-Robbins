@@ -11,6 +11,7 @@ interface Interview {
   explanation: string;
 }
 
+  agencyCode: string;
 interface Props {
   isAdmin: boolean;
   agencyName: string;
@@ -18,6 +19,7 @@ interface Props {
   handleLoginStatus(loginStatus: boolean): void;
   handleInterviewStatus(status: string): void;
   handleAgencyName(name: string): void;
+  handleAgency(agency: AgencyType): void;
 }
 
 interface State {

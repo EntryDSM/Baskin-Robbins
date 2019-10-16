@@ -15,6 +15,7 @@ interface Props {
 }
 
 const CreateInterview: React.FC<Props> = ({ handleLoginStatus }) => {
+  agencyCode
   const [isAddClicked, setIsAddClicked] = React.useState<boolean>(false);
   const [isDateClicked, setIsDateClicked] = React.useState<boolean>(false);
   const [interviewTitle, setInterviewTitle] = React.useState<string>(
@@ -114,6 +115,7 @@ const CreateInterview: React.FC<Props> = ({ handleLoginStatus }) => {
         </S.CreateInterviewHeader>
         {isAddClicked && (
           <AddInterviewer
+            agencyCode="09f3cb"
             setIsAddClicked={() => setIsAddClicked(!isAddClicked)}
           />
         )}
