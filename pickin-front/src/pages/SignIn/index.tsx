@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 
 import * as S from "./style";
 import { pickinLogo } from "./../../assets";
+import * as LocalStorageService from "./../../services/localstorageservice";
 import { getUserToken } from "./../../services/post";
 
 interface StorageKey {
