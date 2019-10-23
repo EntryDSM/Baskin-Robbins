@@ -131,7 +131,6 @@ const AddInterviewer: React.FC<Props> = ({
   const InterviewList = interviewerlist.map((interviewer, index) => (
     <S.AddInterviewerList
       onClick={() => {
-        HandleIsAssigned(index);
         HandleIsAssigned(index, interviewer.interviewer_email);
         console.log(interviewerlist);
       }}
