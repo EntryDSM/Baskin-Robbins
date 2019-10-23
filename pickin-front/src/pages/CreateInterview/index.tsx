@@ -4,6 +4,12 @@ import * as S from "./style";
 import Header from "./../../utils/Header";
 import { AddInterviewer, DefaultForm, SettingDate } from "./../../component";
 
+interface Date {
+  year: string;
+  month: string;
+  day: string;
+}
+
 interface Question {
   type: number;
   title: string;
@@ -25,6 +31,16 @@ const CreateInterview: React.FC<Props> = ({ handleLoginStatus }) => {
   const [questionList, setQuestionList] = React.useState<Question[]>([
     { type: 0, title: "", checkList: [] }
   ]);
+  const [startDate, setStartDate] = React.useState<Date>({
+    year: "2019",
+    month: "01",
+    day: "01"
+  });
+  const [endDate, setEndDate] = React.useState<Date>({
+    year: "2019",
+    month: "01",
+    day: "01"
+  });
 
   const HandleAddQuestion = () =>
     setQuestionList([...questionList, { title: "", type: 0, checkList: [] }]);
@@ -112,6 +128,18 @@ const CreateInterview: React.FC<Props> = ({ handleLoginStatus }) => {
           >
             면접관 추가
           </S.CreateInterviewSettingBtn>
+          <div>
+            <S.CreateInterviewSettingBtn
+              onClick={() => setIsDateClicked(!isDateClicked)}
+            >
+              면접일 설정
+            </S.CreateInterviewSettingBtn>
+            <S.CreateInterviewSettingBtn
+              onClick={() => setIsAddClicked(!isAddClicked)}
+            >
+              면접관 추가
+            </S.CreateInterviewSettingBtn>
+          </div>
         </S.CreateInterviewHeader>
         {isAddClicked && (
           <AddInterviewer
@@ -123,6 +151,10 @@ const CreateInterview: React.FC<Props> = ({ handleLoginStatus }) => {
           <SettingDate
             setIsDateClicked={setIsDateClicked}
             isDateClicked={isDateClicked}
+            startDate={startDate}
+            endDate={endDate}
+            setStartDate={setStartDate}
+            setEndDate={setEndDate}
           />
         )}
         {Questions}

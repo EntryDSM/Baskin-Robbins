@@ -25,6 +25,8 @@ interface TokenType {
   access_token: string;
   refresh_token: string;
   admin: boolean;
+  start_date: string;
+  end_date: string;
 }
 
 export const signUpToInterviewer = async (body: interviewerSignUpType) => {
