@@ -9,11 +9,14 @@ import { getUserToken } from "./../../services/post";
 interface StorageKey {
   access: string;
   refresh: string;
+interface AgencyType {
+  agencyName: string;
   agencyCode: string;
 }
 
 interface Props {
   isLogin: boolean;
+  handleAgency(agency: AgencyType): void;
   handleAdminInfo(isAdmin: boolean): void;
   handleLoginStatus(isLogin: boolean): void;
 }
@@ -47,11 +50,22 @@ class SignIn extends React.Component<Props, State> {
         this.storageKey.refresh,
         response.data.refresh_token
       );
+      LocalStorageService.setToken({
+        access: response.data.access,
+        refresh: response.data.refresh
+      });
 
       if (response.status === 200) {
         this.props.handleLoginStatus(true);
         this.props.handleAdminInfo(response.data.admin);
+
+        if (response.data.admin) {
+          this.props.handleAdminInfo(true);
+          this.props.handleAgency({
+            agencyName: response.data.agency_name,
             agencyCode: response.data.agency_code
+          });
+        }
       }
     } catch (error) {
       if (error.response.status === 400) {
