@@ -6,10 +6,10 @@ import { pickinLogo } from "./../../assets";
 
 interface Props {
   isAdmin: boolean;
-  changeLoginStatus(loginStatus: boolean): void;
+  handleLoginStatus(loginStatus: boolean): void;
 }
 
-const Header: React.FC<Props> = ({ isAdmin, changeLoginStatus }) => (
+const Header: React.FC<Props> = ({ isAdmin, handleLoginStatus }) => (
   <S.HeaderContainer>
     <Link to="/">
       <S.HeaderLogo src={pickinLogo} />
@@ -24,7 +24,7 @@ const Header: React.FC<Props> = ({ isAdmin, changeLoginStatus }) => (
           <S.HeaderMenuItem>면접관 관리</S.HeaderMenuItem>
         </>
       )}
-      <S.HeaderMenuItem onClick={() => changeLoginStatus(false)}>
+      <S.HeaderMenuItem onClick={() => handleLoginStatus(false)}>
         로그아웃
       </S.HeaderMenuItem>
     </S.HeaderMenuContainer>

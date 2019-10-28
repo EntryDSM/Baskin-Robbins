@@ -2,11 +2,17 @@ import * as React from "react";
 
 import * as S from "./style";
 
+interface AgencyType {
+  agencyName: string;
+  agencyCode: string;
+}
+
 interface Props {
   interviewStatus: string;
   isAdmin: boolean;
   handleInterviewStatus(status: string): void;
   handleAgencyName(name: string): void;
+  handleAgency(agency: AgencyType): void;
   agencyName: string;
 }
 
@@ -16,6 +22,7 @@ const CategoryDropdown: React.FC<Props> = ({
   handleInterviewStatus,
   handleAgencyName,
   agencyName
+  handleAgency
 }) => {
   let category: Array<string>;
 
@@ -26,6 +33,7 @@ const CategoryDropdown: React.FC<Props> = ({
     category = ["EntryDSM", "시나브로"];
     category.splice(category.indexOf(agencyName), 1);
   }
+  let category: Array<string> = ["Will pick", "Pickin", "Picked"];
 
   const categories = category.map(item => (
     <S.DropdownItems
@@ -34,6 +42,7 @@ const CategoryDropdown: React.FC<Props> = ({
         isAdmin
           ? () => handleInterviewStatus(item)
           : () => handleAgencyName(item)
+          : () => handleAgency({ agencyName: item, agencyCode: "asdf" })
       }
     >
       {item}

@@ -20,6 +20,7 @@ export const CreateInterviewTitle = styled.input`
 export const CreateInterviewSubtitle = styled.input`
   all: unset;
   width: 630px;
+  width: 600px;
   font-size: 24px;
   margin-top: 16px;
   color: #505050;

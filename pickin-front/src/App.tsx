@@ -10,27 +10,39 @@ import {
   InterviewerSignUp,
   Main,
   SignIn,
-  CreateInterview
+  CreateInterview,
+  Certification
 } from "./pages";
+
+interface AgencyType {
+  agencyName: string;
+  agencyCode: string;
+}
 
 interface Props {}
 
 interface State {
   isLogin: boolean;
   isAdmin: boolean;
-  agencyName: string;
+  agency: AgencyType;
   interviewStatus: string;
 }
 
 class App extends React.Component<Props, State> {
   state = {
-    isLogin: true,
-    isAdmin: true,
-    agencyName: "Pickin",
+    isLogin: false,
+    isAdmin: false,
+    agency: {
+      agencyName: "기관 이름",
+      agencyCode: "asdfjkkl"
+    },
     interviewStatus: "Pickin"
   };
 
   private handleLoginStatus = (isLogin: boolean): void => {
+    if (!isLogin) {
+      sessionStorage.clear();
+    }
     this.setState({ isLogin: isLogin });
   };
 
@@ -41,8 +53,8 @@ class App extends React.Component<Props, State> {
   private handleInterviewStatus = (status: string): void =>
     this.setState({ interviewStatus: status });
 
-  private handleAgencyName = (name: string): void =>
-    this.setState({ agencyName: name });
+  private handleAgency = (agency: AgencyType): void =>
+    this.setState({ agency: agency });
 
   render() {
     return (
@@ -58,11 +70,11 @@ class App extends React.Component<Props, State> {
                 ? () => (
                     <Main
                       isAdmin={this.state.isAdmin}
-                      agencyName={this.state.agencyName}
+                      agencyName={this.state.agency.agencyName}
                       interviewStatus={this.state.interviewStatus}
                       handleLoginStatus={this.handleLoginStatus}
                       handleInterviewStatus={this.handleInterviewStatus}
-                      handleAgencyName={this.handleAgencyName}
+                      handleAgency={this.handleAgency}
                     />
                   )
                 : Landing
@@ -79,6 +91,7 @@ class App extends React.Component<Props, State> {
             path="/signin"
             component={() => (
               <SignIn
+                handleAgency={this.handleAgency}
                 handleAdminInfo={this.handleAdminInfo}
                 handleLoginStatus={this.handleLoginStatus}
                 isLogin={this.state.isLogin}
@@ -92,11 +105,19 @@ class App extends React.Component<Props, State> {
               this.state.isLogin
                 ? () => (
                     <CreateInterview
-                      changeLoginStatus={this.handleLoginStatus}
+                      agencyCode={this.state.agency.agencyCode}
+                      handleLoginStatus={this.handleLoginStatus}
                     />
                   )
                 : Landing
             }
+          />
+          <Route
+            exact
+            path="/certification"
+            component={() => (
+              <Certification handleLoginStatus={this.handleLoginStatus} />
+            )}
           />
         </Switch>
       </BrowserRouter>

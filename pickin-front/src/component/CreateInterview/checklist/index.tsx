@@ -24,6 +24,8 @@ const Checklist: React.FC<Props> = ({
   HandleAddChecklist,
   HandleDeleteChecklist
 }) => {
+  const [checkItem, setCheckItem] = React.useState<string>("");
+
   const HandleChangeListValue = (
     questionIndex: number,
     currentIndex: number,
@@ -51,10 +53,8 @@ const Checklist: React.FC<Props> = ({
     <S.ChecklistItem>
       <S.ChecklistItemCheckBox />
       <S.ChecklistItemContent
-        value={questionList[questionIndex].checkList[index]}
-        onChange={e =>
-          HandleChangeListValue(questionIndex, index, e.target.value)
-        }
+        onChange={e => setCheckItem(e.target.value)}
+        onBlur={() => HandleChangeListValue(questionIndex, index, checkItem)}
         placeholder="체크리스트 항목을 입력해 주세요"
       />
       <S.ChecklistItemDeleteBtn
@@ -69,7 +69,6 @@ const Checklist: React.FC<Props> = ({
       <S.ChecklistAdd
         onClick={() => {
           HandleAddChecklist(questionIndex);
-          console.log(questionList[questionIndex].checkList);
         }}
       >
         <S.ChecklistAddBtn>

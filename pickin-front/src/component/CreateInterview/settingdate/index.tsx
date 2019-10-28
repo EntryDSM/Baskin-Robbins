@@ -10,21 +10,21 @@ interface Date {
 
 interface Props {
   isDateClicked: boolean;
+  startDate: Date;
+  endDate: Date;
+  setStartDate(date: Date): void;
+  setEndDate(date: Date): void;
   setIsDateClicked(isDateClicked: boolean): void;
 }
 
-const SettingDate: React.FC<Props> = ({ isDateClicked, setIsDateClicked }) => {
-  const [startDate, setStartDate] = React.useState<Date>({
-    year: "2019",
-    month: "01",
-    day: "01"
-  });
-  const [endDate, setEndDate] = React.useState<Date>({
-    year: "2019",
-    month: "01",
-    day: "01"
-  });
-
+const SettingDate: React.FC<Props> = ({
+  isDateClicked,
+  setIsDateClicked,
+  startDate,
+  endDate,
+  setStartDate,
+  setEndDate
+}) => {
   return (
     <S.SettingDateContainer>
       <S.SettingDateItem>
